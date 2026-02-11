@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+!jc^dah69_d-+9&i%)fxlv53(g%g90t5%b)cm4s7nrbndmqoc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG") == "True"
+
 
 ALLOWED_HOSTS = [
      "campaign-tracker-backend-production.up.railway.app",
@@ -92,9 +93,10 @@ DATABASES = {
         "USER": os.environ.get("DB_USER"),
         "PASSWORD": os.environ.get("DB_PASSWORD"),
         "HOST": os.environ.get("DB_HOST"),
-        "PORT": os.environ.get("DB_PORT", "5432"),
+        "PORT": os.environ.get("DB_PORT"),
     }
 }
+
 
 
 
