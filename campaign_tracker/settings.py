@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-+!jc^dah69_d-+9&i%)fxlv53(g%g90t5%b)cm4s7nrbndmqoc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+     "campaign-tracker-backend-production.up.railway.app",
+    ".up.railway.app",
+]
 
 
 # Application definition
